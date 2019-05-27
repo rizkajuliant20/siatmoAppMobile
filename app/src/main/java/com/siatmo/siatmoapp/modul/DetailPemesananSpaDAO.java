@@ -12,6 +12,7 @@ public class DetailPemesananSpaDAO {
     @SerializedName("ID_SPAREPARTS")
     @Expose
     private String ID_SPAREPARTS;
+    //lalala
 
     @SerializedName("ID_PEMESANAN")
     @Expose
