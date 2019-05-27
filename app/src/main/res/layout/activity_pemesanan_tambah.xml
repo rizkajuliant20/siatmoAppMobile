@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.owner.pemesananBarang.PemesananTambahActivity"
+    android:background="@drawable/bgsplashscreen">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_marginTop="0dp"
+            android:id="@+id/tvDetailTipeMotor"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Pemesanan"
+            />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Pemesanan"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_marginTop="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_date_range_black_24dp"
+                android:id="@+id/tanggalPemesanan"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showTanggal"
+                android:layout_marginLeft="50dp"
+                android:text="Tanggal"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Supplier"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <Spinner
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerSupplierPemesanan">
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Barang Dipesan"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/spinnerSparepartPemesanan">
+            </Spinner>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/spinnerSparepartPemesanan"
+                android:id="@+id/lay">
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/jumlahSpa"
+                    android:hint="Jumlah"
+                    android:textSize="12sp"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/lay"
+                android:id="@+id/lay1">
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/satuan"
+                    android:hint="Satuan"
+                    android:textSize="12sp"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_add_black_24dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/lay1"
+                android:layout_alignRight="@id/lay1"
+                android:id="@+id/addSpaPemesanan"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/containerPesanan"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GrandTotal"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvGrandTotal"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check_black_24dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:id="@+id/savePemesanan"/>
+    </LinearLayout>
+</ScrollView>

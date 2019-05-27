@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.customerService.kendaraanPelanggan.KendaraanPelangganTambahActivity"
+    android:background="@drawable/bgsplashscreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:id="@+id/tvDetailKendaraanPel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="Tambah Kendaraan Pelanggan"
+            android:textSize="30sp" />
+
+        <!-- Sparepart Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:text="Tipe Motor"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="0dp"
+                android:textColor="#000000"
+                android:id="@+id/tv1"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MTR-"/>
+            <Spinner
+                android:id="@+id/spinnerTipeKendaraan"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:text="Id Customer"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="0dp"
+                android:textColor="#000000"
+                android:id="@+id/tv2"
+                android:textSize="16sp"
+                android:layout_below="@id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLG-"
+                />
+            <Spinner
+                android:id="@+id/spinnerIdCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp">
+
+
+            <EditText
+                android:id="@+id/inputNomorPolisiTambahKendaraanPel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Polisi"
+                android:inputType="text"
+                android:textSize="16sp" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check_black_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:id="@+id/save_imgTipeTambahKendaraanPelanggan"
+        android:visibility="visible"/>
+
+
+
+
+
+</RelativeLayout>

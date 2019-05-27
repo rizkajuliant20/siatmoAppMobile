@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:id="@+id/row_container"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/layoutNameCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:weightSum="2"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Tanggal"
+            android:id="@+id/orderTgl"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/LayoutCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/layoutNameCustomer"
+        android:layout_alignStart="@+id/layoutNameCustomer"
+        android:layout_below="@+id/layoutNameCustomer"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:textSize="15sp"
+        android:weightSum="2">
+
+        <!--<TextView-->
+            <!--android:id="@+id/orderIdPemesanan"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Id Pemesanan"-->
+            <!--android:textSize="15sp"/>-->
+
+        <TextView
+            android:id="@+id/orderIdSupplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Id Supplier"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/orderSubtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Subtotal"
+            android:textSize="15sp"
+            android:layout_below="@id/orderIdSupplier"/>
+
+        <TextView
+            android:id="@+id/orderStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Status"
+            android:textSize="15sp"
+            android:layout_below="@id/orderSubtotal"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:id="@+id/row_container"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/layoutNameTipeMotor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:weightSum="2"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Tipe Motor"
+            android:id="@+id/TipeMotorTitle"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/LayoutTipeMotor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/layoutNameTipeMotor"
+        android:layout_alignStart="@+id/layoutNameTipeMotor"
+        android:layout_below="@+id/layoutNameTipeMotor"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:textSize="15sp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/IDMotor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ID Tipe Motor"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/MerkMotor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Merk Motor"
+            android:textSize="15sp"
+            android:layout_below="@id/IDMotor"/>
+    </RelativeLayout>
+
+</RelativeLayout>

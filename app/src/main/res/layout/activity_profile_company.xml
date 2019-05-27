@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.pelanggan.ProfileCompanyActivity"
+    android:background="@drawable/bgsplashscreen">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ATMA AUTO PROFILE"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000000"
+            android:textSize="26dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/Judul"
+            android:textStyle="bold"
+            android:scrollbarStyle="insideOverlay"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:src="@drawable/companyprofile1"
+            android:layout_below="@id/Judul"
+            android:id="@+id/gambar1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="          Bengkel Atma Auto didirikan pada akhir tahun 2015, berlokasi di Jl. Transyogi Cikeas No. 3 Gunung Putri oleh Keluarga Sudjari. Pada awal berdirinyaa Bengkel Tidar Motor hanya terbatas pada pelayanan cuci mobil dengan peralatan fasilitas seadanya. Semangat para pendiri Bengkel Atma Auto telah menjadikan bengkel tersebut secara berangsur-angsur mengalami kemajuan. Di bidang SDM para teknisinya diikutsertakan training di PT. Astra International, dan diskusi-diskusi dengan para ahli di bidangnya. Peralatan bengkel juga terus diadakan penambahan-penambahan baik peralatan untuk Engine Repair maupun Body Repair. Demikian juga berbagai fasilitas serta perlengkapan pendukung lainnya telah ditambah sehingga menjadi lebih lengkap dan lebih baik. Bahkan status perusahaan telah dirubah menjadi Perusahaan Terbatas (PT. Atma Motor).
+
+            \n\n          Pada tahun 2010 Bengkel Atma Auto juga ditunjuk sebagai Bengkel Resmi Service dan Suku Cadang dari merk Proton. Di samping hal tersebut Bengkel Atma Auto juga menjadi Rekanan Asuransi (Garda Oto, ACA, Raksa Pratika, Pan Pasific, Harta, Samsung Tugu, dsb). Bengkel Atma Auto Motor saat ini telah menjadi Bengkel One Stop Service Station dengan produk :"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="fill_horizontal"
+            android:layout_below="@+id/gambar1"
+            android:id="@+id/Penj1"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:layout_below="@id/Penj1"
+            android:src="@drawable/companyprofile2"
+            android:id="@+id/gambar2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" 1. Engine Repair\n
+2. Body Repair\n
+3. Suku Cadang\n
+4. Ban, AC, Spooring, Salon\n
+5. Anti Karat, (TKD)\n
+6. Power Steering, Dinamo, Radiator, dll"
+            android:layout_below="@id/gambar2"
+            android:layout_marginBottom="20dp"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="fill_horizontal"
+            android:id="@+id/Penj2"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:src="@drawable/companyprofile3"
+            android:layout_below="@id/Penj2"
+            android:layout_marginTop="15dp"
+            android:id="@+id/gambar3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gambar3"
+            android:text="WE ARE HERE"
+            android:textStyle="italic"
+            android:id="@+id/tvweAreHere"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#0f2a54"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tvweAreHere"
+            android:id="@+id/pointer"
+            android:src="@drawable/pointer"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:src="@drawable/mapsatmaauto"
+            android:layout_below="@id/pointer"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+</ScrollView>

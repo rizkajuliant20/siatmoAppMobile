@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.pelanggan.FindHistoryActivity"
+    android:background="@drawable/bgsplashscreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:id="@+id/layz1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find My Transaction"
+                android:layout_centerHorizontal="true"
+                android:textSize="26dp"
+                android:textColor="#000000"
+                android:id="@+id/tvFindMyTrans"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFindMyTrans"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="2dp"
+                android:textColorHint="@color/white"
+                android:id="@+id/NoTelpTrans">
+                <EditText
+                    android:id="@+id/nomorTelponFind"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Nomor Telepon"
+                    android:textSize="16sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NoTelpTrans"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="2dp"
+                android:textColorHint="@color/white"
+                android:id="@+id/NoPlatFind">
+                <EditText
+                    android:id="@+id/nomorPlatFind"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Nomor Plat"
+                    android:textSize="16sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/NoPlatFind"
+                android:layout_marginLeft="130dp"
+                android:layout_marginRight="130dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttons"
+                android:text="Find"
+                android:id="@+id/ButtonFind"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layz2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layz1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:text="Id Customer   :"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/IdUserFind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="110dp"
+                android:inputType="text"
+                android:text="xxxx"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvv1"
+                android:layout_marginTop="5dp"
+                android:inputType="text"
+                android:text="Customer      :"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/NamaCustomerFind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/IdUserFind"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="110dp"
+                android:textSize="16sp"
+                android:text="xxxx"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/NamaCustomerFind"
+                android:layout_marginTop="20dp"
+                android:text="+ Transaction History"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:id="@+id/layoutTransaksiPelanggan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv1"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="visible"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTransaksiSpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutTransaksiPelanggan"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="visible"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutTransaksiSpa"
+                android:layout_marginTop="15dp"
+                android:text="+ Service On Process"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/layoutOnProcessJasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv2"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="visible"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutOnProcessJasa"
+                android:layout_marginTop="15dp"
+                android:text="+ Service Done"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/layoutTransaksiDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv3"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                ></LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:id="@+id/row_containerSpa"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/layoutNameSpa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:weightSum="2"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Sparepart"
+            android:id="@+id/namaSparepart"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/LayoutDetSpa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/layoutNameSpa"
+        android:layout_alignStart="@+id/layoutNameSpa"
+        android:layout_below="@+id/layoutNameSpa"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:textSize="15sp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/idSpa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Id Sparepart"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/TipeSpa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tipe Sparepart"
+            android:textSize="15sp"
+            android:layout_below="@id/idSpa"/>
+
+        <TextView
+            android:id="@+id/stokSpa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stok Sparepart"
+            android:textSize="15sp"
+            android:layout_below="@id/TipeSpa"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.customerService.transaksiPenjualan.TransaksiPenjualanUbahActivity"
+    android:background="@drawable/bgsplashscreen">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis Transaksi"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/jenisTransaksiUbah"
+                android:entries="@array/JenisTransaksi">
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/jenisTransaksiUbah"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tvJenis"
+            />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Process"
+                android:textSize="12sp"
+                android:textColor="#ffffff"
+                android:background="#000000"
+                android:layout_alignParentRight="true"
+                android:id="@+id/processUIUbah"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <Button
+                android:layout_marginTop="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_date_range_black_24dp"
+                android:id="@+id/tanggalTransaksiUbah"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showTanggalTransaksiUbah"
+                android:layout_marginLeft="50dp"
+                android:text="Tanggal"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Montir"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvMontirUbahTransaksi"
+            android:visibility="visible"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/MontirTransaksiUbah"
+            android:visibility="visible">
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cabang"
+            android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/CabangTransaksiUbah">
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer"
+            android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/CustomerTransaksiUbah">
+        </Spinner>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutSSPVUbah"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/laysJasaUbah"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Plat Nomor"
+                    android:id="@+id/tvPlatUbah"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/PlatNomorCustomerUbah"
+                    android:layout_below="@+id/tvPlatUbah">
+                </Spinner>
+
+                <Button
+                    android:textSize="12sp"
+                    android:text="Next"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/MontirOnDutyProcessUbah"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/PlatNomorCustomerUbah"
+                    android:layout_height="wrap_content"
+                    android:text="Jasa Service"
+                    android:id="@+id/JasaServiceTransaksiUbah"
+                    android:visibility="visible"
+                    android:layout_marginTop="10dp"/>
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/JasaServiceTransaksiUbah"
+                    android:id="@+id/spinnerJasaServiceTransaksiUbah"
+                    android:visibility="visible">
+                </Spinner>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addJasaServiceTransaksiUbah"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_add_black_24dp"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutJasaServiceAddUbah"
+                android:layout_below="@id/laysJasaUbah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:visibility="visible">
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/laysSparepartUbah"
+                android:layout_below="@id/layoutJasaServiceAddUbah"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sparepart"
+                    android:id="@+id/SparepartTransaksiUbah"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SparepartTransaksiUbah"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/spinnerSparepartTransaksiUbah"
+                    android:visibility="visible">
+                </Spinner>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/spinnerSparepartTransaksiUbah"
+                    android:id="@+id/lays3Ubah"
+                    android:layout_alignParentBottom="true">
+                    <EditText
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:id="@+id/jumlahSparepartTransaksiUbah"
+                        android:hint="Jumlah"
+                        android:inputType="number"
+                        android:textSize="14sp"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_add_black_24dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/addPenjualanSparepartTransaksiUbah"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutSparepartAddUbah"
+                android:layout_below="@id/laysSparepartUbah"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtotal"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/hargaSebelumDiskonUbah"
+            android:text="Rp">
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/edit_imgTransUbah"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_black_24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/save_imgTransUbah"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/del_imgTransUbah"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

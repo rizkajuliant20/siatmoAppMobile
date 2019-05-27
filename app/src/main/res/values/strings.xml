@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">siatmoApp</string>
+    <string name="DetailSparepart">Detail Sparepart</string>
+    <string name="SimpanSparepart">Simpan Sparepart</string>
+    <string name="DaftarSparepart">Daftar Sparepart</string>
+
+    <string name="DetailSup">Detail Supplier</string>
+    <string name="SimpanSup">Simpan Supplier</string>
+    <string name="DaftarSup">Daftar Supplier</string>
+    <string-array name="posisi">
+        <item>Pilih Posisi</item>
+        <item>Depan-Kaca</item>
+        <item>Depan-Dus</item>
+        <item>Depan-Ban</item>
+        <item>Depan-Kayu</item>
+        <item>Tengah-Kaca</item>
+        <item>Tengah-Dus</item>
+        <item>Tengah-Ban</item>
+        <item>Tengah-Kayu</item>
+        <item>Belakang-Kaca</item>
+        <item>Belakang-Dus</item>
+        <item>Belakang-Ban</item>
+        <item>Belakang-Kayu</item>
+    </string-array>
+
+    <string-array name="statusPemesanan">
+        <item>On Process</item>
+        <item>Arrived</item>
+    </string-array>
+
+    <string-array name="JenisTransaksi">
+        <item>SS</item>
+        <item>SV</item>
+        <item>SP</item>
+    </string-array>
+
+    <string-array name="StatusService">
+        <item>On Process</item>
+        <item>Done</item>
+    </string-array>
+
+</resources>

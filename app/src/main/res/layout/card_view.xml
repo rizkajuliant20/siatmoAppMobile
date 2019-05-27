@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lays1">
+            <ImageView
+                android:id="@+id/ivGambarSparepart"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/tvNamaSparepart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivGambarSparepart"
+                android:padding="3dp"
+                android:textSize="13dp"
+                android:text="Nama Sparepart"
+                android:textStyle="bold"
+                android:background="#db800a"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:id="@+id/tvJumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNamaSparepart"
+                android:padding="3dp"
+                android:textSize="13dp"
+                android:text="Jumlah"
+                android:background="#db800a"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:id="@+id/tvHarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvJumlah"
+                android:padding="3dp"
+                android:textSize="13dp"
+                android:text="Harga"
+                android:background="#db800a"
+                android:textColor="#ffffff"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

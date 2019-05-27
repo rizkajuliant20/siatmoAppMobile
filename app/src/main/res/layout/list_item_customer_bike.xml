@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:id="@+id/row_container"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/layoutNameCustBike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:weightSum="2"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Nomor Plat"
+            android:id="@+id/NomorPlat"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/LayoutCustomerBike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/layoutNameCustBike"
+        android:layout_alignStart="@+id/layoutNameCustBike"
+        android:layout_below="@+id/layoutNameCustBike"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:textSize="15sp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/CustSpace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Id Customer"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/BikeTypeSpace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Id Tipe Motor"
+            android:textSize="15sp"
+            android:layout_below="@id/CustSpace"/>
+    </RelativeLayout>
+
+</RelativeLayout>

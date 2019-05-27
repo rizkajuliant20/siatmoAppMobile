@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.siatmo.siatmoapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <activity
+            android:name=".view.owner.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.LandingPageMainActivity"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.owner.supplier.SupplierTambahActivity"
+            android:theme="@style/AppTheme2" />
+        //DONE
+        <activity
+            android:name=".view.owner.supplier.SupplierUbahActivity"
+            android:theme="@style/EditorTheme" />
+        //DONE
+        <activity
+            android:name=".view.owner.supplier.SupplierTampilSemuaActivity"
+            android:label="Daftar Supplier"
+            android:theme="@style/EditorTheme" />
+        //DONE
+        <activity
+            android:name=".view.owner.sparepart.SparepartTampilSemuaActivity"
+            android:label="Daftar Sparepart"
+            android:theme="@style/EditorTheme" />
+        //DONE
+        <activity
+            android:name=".view.owner.sparepart.SparepartTambahActivity"
+            android:theme="@style/AppTheme2" />
+        //DONE
+        <activity
+            android:name=".view.owner.sparepart.SparepartUbahActivity"
+            android:theme="@style/EditorTheme" />
+        //DELETE->DONE
+        <activity
+            android:name=".view.customerService.MainActivityCS"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.owner.cabang.CabangTambahActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.owner.cabang.CabangUbahActivity"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.owner.cabang.CabangTampilSemuaActivity"
+            android:label="Daftar Cabang"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.owner.tipeMotor.TipeMotorTambahActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.owner.tipeMotor.TipeMotorUbahActivity"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.owner.tipeMotor.TipeMotorTampilSemuaActivity"
+            android:label="Daftar Tipe dan Merk Motor"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.customerService.kendaraanPelanggan.KendaraanPelangganTambahActivity"
+            android:theme="@style/AppTheme2" />
+        //DONE
+        <activity
+            android:name=".view.customerService.kendaraanPelanggan.KendaraanPelangganUbahActivity"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.customerService.kendaraanPelanggan.KendaraanPelangganTampilSemuaActivity"
+            android:label="Daftar Nomor Plat Pelanggan"
+            android:theme="@style/EditorTheme" />
+        //DONE
+        <activity
+            android:name=".view.owner.pemesananBarang.PemesananTambahActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.owner.pemesananBarang.PemesananUbahActivity"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.owner.pemesananBarang.PemesananTampilSemuaActivity"
+            android:label="Daftar Pemesanan"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.LandingPageAdminActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.LandingPageGuestActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.customerService.pelanggan.PelangganTambahActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.customerService.pelanggan.PelangganTampilSemuaActivity"
+            android:label="Daftar Pelanggan"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.customerService.pelanggan.PelangganUbahActivity"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.customerService.transaksiPenjualan.TransaksiPenjualanTambahActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.customerService.transaksiPenjualan.TransaksiPenjualanTampilSemuaActivity"
+            android:label="Daftar Transaksi"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.customerService.transaksiPenjualan.TransaksiPenjualanUbahActivity"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.owner.sparepart.StokTakOptimalActivity"
+            android:label="Daftar Stok Tak Optimal"
+            android:theme="@style/EditorTheme" />
+        <activity
+            android:name=".view.pelanggan.ProfileCompanyActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.pelanggan.KatalogSparepartActivity"
+            android:theme="@style/EditorTheme"
+            android:label="Katalog Sparepart"/>
+        <activity
+            android:name=".view.pelanggan.FindHistoryActivity"
+            android:theme="@style/AppTheme2" />
+
+        <activity android:name=".view.owner.pemesananBarang.HistoriBarangMasukActivity"
+            android:theme="@style/EditorTheme"
+            android:label="Histori Barang Masuk">
+
+        </activity>
+    </application>
+
+</manifest>
