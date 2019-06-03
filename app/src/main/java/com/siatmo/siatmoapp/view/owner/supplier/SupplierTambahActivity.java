@@ -93,4 +93,8 @@ public class SupplierTambahActivity extends AppCompatActivity {
         startActivity(new Intent(SupplierTambahActivity.this, SupplierTampilSemuaActivity.class));
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SupplierTampilSemuaActivity.class));
+    }
 }

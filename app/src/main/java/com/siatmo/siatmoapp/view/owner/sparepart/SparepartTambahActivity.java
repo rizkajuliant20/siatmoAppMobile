@@ -217,4 +217,8 @@ public class SparepartTambahActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SparepartTampilSemuaActivity.class));
+    }
 }

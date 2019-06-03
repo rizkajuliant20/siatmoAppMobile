@@ -237,4 +237,9 @@ public class CabangUbahActivity extends AppCompatActivity {
         });
         startActivity(new Intent(CabangUbahActivity.this, CabangTampilSemuaActivity.class));
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), CabangTampilSemuaActivity.class));
+    }
 }

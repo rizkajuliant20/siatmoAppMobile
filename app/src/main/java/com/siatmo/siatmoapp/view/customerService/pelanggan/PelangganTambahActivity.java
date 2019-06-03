@@ -79,4 +79,9 @@ public class PelangganTambahActivity extends AppCompatActivity {
     private void VoidCancel() {
         startActivity(new Intent(PelangganTambahActivity.this, PelangganTampilSemuaActivity.class));
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), PelangganTampilSemuaActivity.class));
+    }
 }

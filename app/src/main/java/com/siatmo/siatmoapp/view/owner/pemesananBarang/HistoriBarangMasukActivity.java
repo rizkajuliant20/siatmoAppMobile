@@ -22,6 +22,7 @@ import com.siatmo.siatmoapp.adapter.AdapterPemesanan;
 import com.siatmo.siatmoapp.api.ApiInterface;
 import com.siatmo.siatmoapp.api.RetrofitClient;
 import com.siatmo.siatmoapp.modul.PemesananSparepartDAO;
+import com.siatmo.siatmoapp.view.owner.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -146,5 +147,10 @@ public class HistoriBarangMasukActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         getOrder();
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 }

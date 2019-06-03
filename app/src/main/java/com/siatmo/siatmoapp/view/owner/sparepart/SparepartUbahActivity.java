@@ -525,6 +525,9 @@ public class SparepartUbahActivity extends AppCompatActivity {
         spaStokMin.setFocusableInTouchMode(true);
         spaTipe.setFocusableInTouchMode(true);
     }
-
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SparepartTampilSemuaActivity.class));
+    }
 
 }

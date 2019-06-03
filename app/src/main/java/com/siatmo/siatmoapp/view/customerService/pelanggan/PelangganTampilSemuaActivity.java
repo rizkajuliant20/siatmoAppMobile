@@ -22,6 +22,7 @@ import com.siatmo.siatmoapp.adapter.AdapterCustomer;
 import com.siatmo.siatmoapp.api.ApiInterface;
 import com.siatmo.siatmoapp.api.RetrofitClient;
 import com.siatmo.siatmoapp.modul.CustomerDAO;
+import com.siatmo.siatmoapp.view.customerService.MainActivityCS;
 
 import java.util.List;
 
@@ -145,5 +146,10 @@ public class PelangganTampilSemuaActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         getCustomer();
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), MainActivityCS.class));
     }
 }

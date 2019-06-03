@@ -322,14 +322,15 @@ public class SupplierUbahActivity extends AppCompatActivity {
     }
 
     private void editMode(){
-
         msupNama.setFocusableInTouchMode(true);
         msupAlamat.setFocusableInTouchMode(true);
         msupTelepon.setFocusableInTouchMode(true);
         msalTelepon.setFocusableInTouchMode(true);
         msalNama.setFocusableInTouchMode(true);
-
-
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SupplierTampilSemuaActivity.class));
+    }
 }

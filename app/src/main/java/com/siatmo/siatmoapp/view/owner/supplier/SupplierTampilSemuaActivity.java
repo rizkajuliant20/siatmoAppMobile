@@ -22,6 +22,7 @@ import com.siatmo.siatmoapp.adapter.AdapterSupplier;
 import com.siatmo.siatmoapp.api.ApiInterface;
 import com.siatmo.siatmoapp.api.RetrofitClient;
 import com.siatmo.siatmoapp.modul.SupplierDAO;
+import com.siatmo.siatmoapp.view.owner.MainActivity;
 
 import java.util.List;
 
@@ -150,5 +151,10 @@ public class SupplierTampilSemuaActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         getSupplier();
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 }

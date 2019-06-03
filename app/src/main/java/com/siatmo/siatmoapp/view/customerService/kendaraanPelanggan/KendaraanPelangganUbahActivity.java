@@ -265,4 +265,9 @@ public class KendaraanPelangganUbahActivity extends AppCompatActivity {
         });
         startActivity(new Intent(KendaraanPelangganUbahActivity.this, KendaraanPelangganTampilSemuaActivity.class));
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), KendaraanPelangganTampilSemuaActivity.class));
+    }
 }

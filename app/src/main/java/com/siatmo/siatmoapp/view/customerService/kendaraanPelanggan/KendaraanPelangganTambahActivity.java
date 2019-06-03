@@ -118,4 +118,9 @@ public class KendaraanPelangganTambahActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), KendaraanPelangganTampilSemuaActivity.class));
+    }
 }

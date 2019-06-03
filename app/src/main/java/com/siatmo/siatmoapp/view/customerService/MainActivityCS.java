@@ -1,10 +1,12 @@
 package com.siatmo.siatmoapp.view.customerService;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.siatmo.siatmoapp.R;
 import com.siatmo.siatmoapp.api.ApiInterface;
@@ -18,9 +20,10 @@ import com.siatmo.siatmoapp.view.customerService.transaksiPenjualan.TransaksiPen
 public class MainActivityCS extends AppCompatActivity {
 
     SharedPrefManager sharedPrefManager;
-    TextView txtNamaAkses;
-    String pengakses;
-    ApiInterface apiInterface;
+    private TextView txtNamaAkses;
+    private String pengakses;
+    private ApiInterface apiInterface;
+    private boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,5 +62,22 @@ public class MainActivityCS extends AppCompatActivity {
     public void transaksiPenjualan(View view){
         Intent i= new Intent(MainActivityCS.this,TransaksiPenjualanTampilSemuaActivity.class);
         startActivity(i);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click back again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        },2000);
     }
 }

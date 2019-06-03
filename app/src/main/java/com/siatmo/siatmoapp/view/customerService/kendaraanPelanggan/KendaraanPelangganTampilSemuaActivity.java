@@ -22,6 +22,7 @@ import com.siatmo.siatmoapp.adapter.AdapterCustomerBike;
 import com.siatmo.siatmoapp.api.ApiInterface;
 import com.siatmo.siatmoapp.api.RetrofitClient;
 import com.siatmo.siatmoapp.modul.CustomerBikeDAO;
+import com.siatmo.siatmoapp.view.customerService.MainActivityCS;
 
 import java.util.List;
 
@@ -147,5 +148,10 @@ public class KendaraanPelangganTampilSemuaActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         getCustomerBike();
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), MainActivityCS.class));
     }
 }

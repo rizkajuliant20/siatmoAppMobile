@@ -236,4 +236,9 @@ public class PelangganUbahActivity extends AppCompatActivity {
         });
         startActivity(new Intent(PelangganUbahActivity.this, PelangganTampilSemuaActivity.class));
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), PelangganTampilSemuaActivity.class));
+    }
 }

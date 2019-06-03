@@ -22,6 +22,8 @@ import com.siatmo.siatmoapp.adapter.AdapterCabang;
 import com.siatmo.siatmoapp.api.ApiInterface;
 import com.siatmo.siatmoapp.api.RetrofitClient;
 import com.siatmo.siatmoapp.modul.CabangDAO;
+import com.siatmo.siatmoapp.view.customerService.MainActivityCS;
+import com.siatmo.siatmoapp.view.owner.MainActivity;
 
 import java.util.List;
 
@@ -145,5 +147,10 @@ public class CabangTampilSemuaActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         getCabang();
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 }
