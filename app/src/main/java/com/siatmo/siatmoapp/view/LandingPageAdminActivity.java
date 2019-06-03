@@ -56,7 +56,6 @@ public class LandingPageAdminActivity extends AppCompatActivity {
                 startActivity(new Intent(LandingPageAdminActivity.this, MainActivityCS.class)
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
             }
-
         }
 
         LoginAdmin=findViewById(R.id.loginBtn);
@@ -76,15 +75,15 @@ public class LandingPageAdminActivity extends AppCompatActivity {
         apiInterface = RetrofitClient.getApiClient().create(ApiInterface.class);
 
         if(username.getText().toString().isEmpty()){
-            username.setError("Silahkan isi Username");
+            username.setError("Please fill the Username");
             progress.dismiss();
         }else if (password.getText().toString().isEmpty()){
-            password.setError("Silahkan isi Password");
+            password.setError("Please fill the Password");
             progress.dismiss();
         }else if(password.getText().toString().equals("own") && password.getText().toString().equals("own")){
             sharedPrefManager.saveSPString(SharedPrefManager.SP_Username, "own");
             sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, true);
-            Toast.makeText(getApplicationContext(), "Welcome Boss", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Welcome Boss Phillip", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(LandingPageAdminActivity.this,MainActivity.class));
             progress.dismiss();
         }else {
@@ -96,12 +95,11 @@ public class LandingPageAdminActivity extends AppCompatActivity {
                                 progress.dismiss();
                                 try {
                                     JSONObject jsonRes = new JSONObject(response.body().string());
-                                    Toast.makeText(getApplicationContext(), "BERHASIL LOGIN", Toast.LENGTH_SHORT).show();
                                     String username = jsonRes.getJSONObject("data").getString("username");
+                                    Toast.makeText(getApplicationContext(), "Login Successful "+username, Toast.LENGTH_SHORT).show();
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_Username, username);
                                     sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, true);
                                     Intent i =new Intent(getApplicationContext(), MainActivityCS.class);
-                                    i.putExtra("uname",username);
                                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                                     startActivity(i);
                                     finish();
@@ -112,7 +110,7 @@ public class LandingPageAdminActivity extends AppCompatActivity {
                                 }
                             } else {
                                 progress.dismiss();
-                                Toast.makeText(getApplicationContext(),"Username dan Password Salah!",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"Wrong Username and Password!",Toast.LENGTH_SHORT).show();
                             }
                         }
                         @Override

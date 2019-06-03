@@ -34,7 +34,7 @@ public class SharedPrefManager {
     }
 
     public String getSPNama(){
-        return sp.getString(SP_Username, "");
+        return sp.getString(SP_Username,"");
     }
 
 

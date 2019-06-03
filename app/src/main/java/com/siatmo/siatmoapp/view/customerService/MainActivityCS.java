@@ -19,9 +19,9 @@ import com.siatmo.siatmoapp.view.customerService.transaksiPenjualan.TransaksiPen
 
 public class MainActivityCS extends AppCompatActivity {
 
-    SharedPrefManager sharedPrefManager;
-    private TextView txtNamaAkses;
-    private String pengakses;
+    private SharedPrefManager sharedPrefManager;
+    private TextView txtNamaAkses, txtNamaRole;
+    private String pengakses, pengaksesTest;
     private ApiInterface apiInterface;
     private boolean doubleBackToExitPressedOnce = false;
     @Override
@@ -29,12 +29,7 @@ public class MainActivityCS extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_cs);
         txtNamaAkses=findViewById(R.id.txtNamaAksesPegawai);
-
-        Intent intent= getIntent();
-        pengakses=intent.getStringExtra("uname");
-
-        txtNamaAkses.setText(pengakses);
-
+        txtNamaRole=findViewById(R.id.txtRole);
         //LOGOUT WITH SESSION
         sharedPrefManager = new SharedPrefManager(this);
         findViewById(R.id.layoutlogoutCS).setOnClickListener(new View.OnClickListener() {
@@ -46,6 +41,14 @@ public class MainActivityCS extends AppCompatActivity {
                 finish();
             }
         });
+        pengaksesTest= sharedPrefManager.getSPNama().toString();
+        String splitRole[]= pengaksesTest.split("-");
+        txtNamaAkses.setText(splitRole[1]);
+        if (splitRole[0].equals("CS")){
+            txtNamaRole.setText("Customer Service");
+        }else{
+            txtNamaRole.setText(splitRole[0]);
+        }
 
     }
 

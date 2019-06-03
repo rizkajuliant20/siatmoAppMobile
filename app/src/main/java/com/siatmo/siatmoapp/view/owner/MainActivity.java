@@ -44,15 +44,13 @@ public class MainActivity extends AppCompatActivity {
     private ApiInterface apiInterface;
     private List<SparepartDAO> spaList;
     private boolean doubleBackToExitPressedOnce = false;
-    SharedPrefManager sharedPrefManager;
+    private SharedPrefManager sharedPrefManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         createNotificationChannel();
         apiInterface = RetrofitClient.getApiClient().create(ApiInterface.class);
-
 
         //LOGOUT WITH SESSION
         sharedPrefManager = new SharedPrefManager(this);
@@ -65,9 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
         notifikasiSpareparts();
-
     }
 
     public void supplier(View view){
